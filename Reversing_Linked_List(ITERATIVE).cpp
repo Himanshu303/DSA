@@ -25,13 +25,7 @@ void insert_end(int n)
 //THIS IS ITERATIVE VERSION OF REVERSING A LINKED LIST
 void reverse()      
 {
-    cout<<"THE ORIGINAL LINKED LIST IS\n";
-    Node* temp=head;
-    while(temp!=NULL)
-    {
-        cout<<temp->data<<" ";
-        temp=temp->next;
-    }
+    
     cout<<"\n";
     Node *current=new Node();           //IT WILL HOLD CURRENT NODE
     Node *previous=new Node();          //IT WILL HOLD PREVOUS NODE OF CURRENT NODE
@@ -48,18 +42,21 @@ void reverse()
     head=previous;                      //AFTER THE ITERATION THE LATEST PREVIOUS NODE WILL BE THE HEAD NODE
 }   
 
+
 void display()
 {
-    Node* temp=new Node();
-    if(head==NULL) cout<<"LL IS EMPTY\n";
+    if(head==NULL) cout<<"LIST DOESNT EXIST\n";
     else
     {
+        Node* temp=new Node();
         temp=head;
-        while(temp!=NULL)
-        {
-            cout<<temp->data<<" ";
-            temp=temp->next;
-        }
+       
+        while(temp!=NULL)                                           //TRAVERSING TO THE END
+        {   
+            cout<<temp->data<<"->";                                  //PRINING CURRENT DATA
+            temp=temp->next;                                        //MOVING FORWARD IN LINKED LIST
+        }       
+        cout<<"NULL";
     }
 }
 
@@ -70,7 +67,16 @@ int main()
     insert_end(2);
     insert_end(3);
     insert_end(4);
+    cout<<"ORIGINAL LINKED LIST IS\n";
+    display();
     reverse();
     cout<<"NEW LINKED LIST IS\n";
     display();
+
+    //THE OUTPUT OF THE PROGRAM IS
+ /*   ORIGINAL LINKED LIST IS
+    1->2->3->4->NULL
+    NEW LINKED LIST IS
+    4->3->2->1->NULL
+*/
 }
