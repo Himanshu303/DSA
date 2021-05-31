@@ -70,11 +70,13 @@ void display()
     {
         Node* temp=new Node();
         temp=head;
+        cout<<"LINKED LIST ELEMENTS:\n";
         while(temp!=NULL)                                           //TRAVERSING TO THE END
         {   
-            cout<<temp->data<<" ";                                  //PRINING CURRENT DATA
+            cout<<temp->data<<"->";                                  //PRINING CURRENT DATA
             temp=temp->next;                                        //MOVING FORWARD IN LINKED LIST
         }       
+        cout<<"NULL";
     }
 }
 
@@ -147,5 +149,8 @@ int main()
     insert_npos(8,2);
     delete_npos(5);
     delete_end();
-    display();
+    display(); 
+
+    //THE OUTPUT OF THIS PROGRAM IS
+    //1->8->2->3->NULL
 }
