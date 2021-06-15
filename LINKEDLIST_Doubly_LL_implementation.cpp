@@ -6,6 +6,7 @@ struct Node{
     Node* prev;
     Node* next;
 }*head=NULL;
+ 
 
 void insert_start(int n)
 {
