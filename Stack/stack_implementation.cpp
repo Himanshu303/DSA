@@ -2,7 +2,7 @@
 using namespace std;
 #define MAX 1000
 
-//CREATING CLASS FOR STACK USING ARRAY HAVING MAX SIZE 100
+//CREATING CLASS FOR STACK USING ARRAY HAVING MAX SIZE 1000
 class Stack_array
 {
     public:
