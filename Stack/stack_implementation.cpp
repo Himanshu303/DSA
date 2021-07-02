@@ -23,7 +23,7 @@ class Stack_array
 
 void Stack_array::push(int x)           //PUSHING ELEMENT IN STACK
     {
-        if(top<=MAX)
+        if(top<MAX)
         {
             stack[++top]=x;
             cout<<"Element "<<x<<" inserted successfully\n";
