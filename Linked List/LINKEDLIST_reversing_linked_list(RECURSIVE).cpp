@@ -31,7 +31,7 @@ void recur_reverse(Node* p)
         head=p;
         return;
     }
-    recur_reverse(p->next);           //Tail recursion
+    recur_reverse(p->next);          
     Node* q=p->next;            //Getting address of last node
     q->next=p;                  //setting last nodes next as second last node
     p->next=NULL;               //setting second last nodes next as NULL which will be updated in next stack
